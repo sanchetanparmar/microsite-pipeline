@@ -21,6 +21,29 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Linting
+        run: npm run lint
+
+      - name: Check Formatting 
+        run: npm run format:check
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Run Accessibility (a11y) & Smoke Tests
+        run: npm run test:smoke
+
+      - name: Build Static Site
+        run: npm run build
       - name: Upload Deployment Artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
