@@ -39,6 +39,11 @@ jobs:
       - name: Run Tests
         run: npm test
 
+      - name: Static Analysis
+        uses: actions/checkout@v6
+        with:
+         config: p/javascript
+
       - name: Run Accessibility (a11y) & Smoke Tests
         run: npm run test:smoke
 
@@ -50,7 +55,7 @@ jobs:
         with:
           path: './dist'
 
-          
+
   deploy:
     name: Deploy to GitHub Pages
     needs: validate_and_build
