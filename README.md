@@ -11,7 +11,7 @@
 
 ## CI/CD Pipeline Flow 
 
-1. **Validation Phase:** Triggered automatically on **all Pull Requests** and direct **Pushes to `main`**.
+1. **Validation Phase:** Triggered automatically on all Pull Requests and direct Pushes to `main`.
    * Checks out the codebase.
    * Sets up a Node.js runtime environment.
    * Runs `npm run lint` scan code structures.
@@ -20,12 +20,12 @@
    * Runs `npm test` Run define tests 
    * Builds the site into a directory (`/dist`).
 
-2. **Deployment Phase:** Triggered **ONLY on direct merges or pushes to the `main` branch**.
-   * Publishes the contents of the `/dist` directory to github page .
+2. **Deployment Phase:** Triggered ONLY on direct merges or pushes to the `main` branch.
+   * Publishes the contents of the `/dist` directory to github page
 
 ## Local Development & Testing
 
-* **Download and install all the dependencies listed in your package.json :**
+* Download and install all the dependencies listed in your package.json
   ```bash
   npm install
   ```
