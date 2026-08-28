@@ -1,0 +1,8 @@
+{
+  "name": "html-js-micro-site",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "node -e \"console.log('Code List')\"",
+    "test": "node -e \"console.log('Automated Tests')\""
+  }
+}
