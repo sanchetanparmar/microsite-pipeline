@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "node -e \"console.log('Code List')\"",
-    "test": "node -e \"console.log('Automated Tests')\""
+    "test": "node -e \"console.log('Automated Tests')\"",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html  dist/",
+    "format:check": "node -e \"console.log('Formatting')\"",
+    "test:smoke": "node -e \"console.log('Smoke Tests')\""
   }
 }
