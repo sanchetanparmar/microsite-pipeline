@@ -23,6 +23,10 @@
 2. **Deployment Phase:** Triggered ONLY on direct merges or pushes to the `main` branch.
    * Publishes the contents of the `/dist` directory to github page
 
+3. **Deployment Approval**
+   * Go to Repo settings 
+   * Click on Environment and select `github-pages` environment 
+   * Check on `Required reviewers` Add Required reviewers for deploymnet and Save
 ## Local Development & Testing
 
 * Download and install all the dependencies listed in your package.json
