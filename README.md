@@ -256,14 +256,6 @@ Repository
   → GitHub Actions
 ```
 
-## Deployment URL
-
-After a successful deployment, the site will normally be available at:
-
-```text
-https://sanchetanparmar.github.io/microsite-pipeline/
-```
-
 ## Failure Protection
 
 Deployment is separated from validation.
@@ -315,3 +307,10 @@ Approval -
 
 After Deployment - 
 ![alt text](image-4.png)
+
+## Deployment URL
+
+After a successful deployment, the site will normally be available at:
+
+```text
+https://sanchetanparmar.github.io/microsite-pipeline/
