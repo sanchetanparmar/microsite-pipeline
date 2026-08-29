@@ -44,11 +44,6 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: Static Analysis
-        uses: actions/checkout@v6
-        with:
-         config: p/javascript
-
       - name: Run Smoke Tests
         run: npm run test:smoke
 
@@ -290,6 +285,11 @@ Show:
 ```
 
 and confirm that no deployment occurs.
+
+## Deployment Approval
+   * Go to Repo settings 
+   * Click on Environment and select `github-pages` environment 
+   * Check on `Required reviewers` Add Required reviewers for deploymnet and Save
 
 ### Workflow jobs 
 Validate and Build Site and Deploy to GitHub Pages
