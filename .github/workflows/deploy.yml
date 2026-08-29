@@ -44,11 +44,14 @@ jobs:
         with:
          config: p/javascript
 
-      - name: Run Accessibility (a11y) & Smoke Tests
+      - name: Run Smoke Tests
         run: npm run test:smoke
 
-      - name: Build Static Site
-        run: npm run build
+      - name: Build website
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          
       - name: Upload Deployment Artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
